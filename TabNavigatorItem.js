@@ -1,8 +1,11 @@
 'use strict';
 
 import React, {
-  Text,
   PropTypes,
+} from 'react';
+
+import {
+  Text,
   Image,
 } from 'react-native';
 

@@ -1,12 +1,15 @@
 'use strict';
 
 import React, {
+  PropTypes
+} from 'react';
+
+import {
   Animated,
   Platform,
   StyleSheet,
   View,
-  PropTypes,
-  ScrollView,
+  ScrollView
 } from 'react-native';
 
 import Layout from './Layout';

@@ -4,6 +4,9 @@ import NativeButton from './NativeButton';
 
 import React, {
   PropTypes,
+} from 'react';
+
+import {
   StyleSheet,
   Text,
   TouchableOpacity,

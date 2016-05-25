@@ -1,12 +1,15 @@
 import React, {
   Component,
+  PropTypes,
+} from 'react';
+
+import {
   TouchableWithoutFeedback,
   TouchableNativeFeedback,
   TouchableOpacity,
   Text,
   StyleSheet,
   Platform,
-  PropTypes,
   View,
 } from 'react-native';
 

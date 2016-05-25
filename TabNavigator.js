@@ -3,7 +3,9 @@
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Set } from 'immutable';
 import React, {
-  PropTypes,
+  PropTypes
+} from 'react';
+import {
   StyleSheet,
   View,
 } from 'react-native';
