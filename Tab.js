@@ -2,16 +2,8 @@
 
 import NativeButton from './NativeButton';
 
-import React, {
-  PropTypes,
-} from 'react';
-
-import {
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import React, {PropTypes} from 'react';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 import Layout from './Layout';
 
@@ -37,10 +29,7 @@ export default class Tab extends React.Component {
 
   render() {
     let { title, badge, disabled, disabledStyle } = this.props;
-    let icon = null;
-    if (React.Children.count(this.props.children) > 0) {
-      icon = React.Children.only(this.props.children);
-    }
+    let icon = React.Children.only(this.props.children);
 
     if (title) {
       title =
