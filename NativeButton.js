@@ -52,8 +52,6 @@ class NativeButton extends Component {
 
   constructor() {
     super();
-
-
   }
 
   _renderInner() {

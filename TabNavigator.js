@@ -31,6 +31,10 @@ export default class TabNavigator extends React.Component {
     scrollEnabled: PropTypes.bool,
   };
 
+  static defaultProps = {
+    scrollEnabled: false,
+  };
+
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -120,7 +124,9 @@ export default class TabNavigator extends React.Component {
   }
 
   _renderTab(item) {
+    const { scrollEnabled } = this.props;
     let icon;
+
     if (!(icon = this._renderVectorialIcon(item))) {
       if (item.props.selected) {
         if (item.props.renderSelectedIcon) {
@@ -147,7 +153,8 @@ export default class TabNavigator extends React.Component {
       <Tab
         style={[
           item.props.style,
-          item.props.selected ? item.props.selectedStyle : null ]}
+          item.props.selected ? item.props.selectedStyle : null,
+          !scrollEnabled ? { flex: 1 } : null ]}
         testID={item.props.testID}
         title={item.props.title}
         allowFontScaling={item.props.allowFontScaling}

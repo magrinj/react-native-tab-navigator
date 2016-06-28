@@ -86,10 +86,9 @@ let styles = StyleSheet.create({
     right: -10,
   },
   container: {
-    flex: 1,
     flexDirection: 'column',
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   title: {
     color: '#929292',

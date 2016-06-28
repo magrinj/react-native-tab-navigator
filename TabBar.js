@@ -67,7 +67,7 @@ let styles = StyleSheet.create({
     right: 0,
   },
   tabsContainer: {
-    flex: 1,
+    height: Layout.tabBarHeight,
     backgroundColor: 'transparent',
     flexDirection: 'row',
     justifyContent: 'space-around',
