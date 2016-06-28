@@ -47,7 +47,7 @@ export default class TabBar extends React.Component {
             { this.props.children }
           </ScrollView>
           :
-          <View style={tabStyle}>
+          <View style={[tabStyle, { flex: 1 }]}>
             { this.props.children }
           </View>
         }
@@ -67,7 +67,6 @@ let styles = StyleSheet.create({
     right: 0,
   },
   tabsContainer: {
-    height: Layout.tabBarHeight,
     backgroundColor: 'transparent',
     flexDirection: 'row',
     justifyContent: 'space-around',
