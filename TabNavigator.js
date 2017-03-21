@@ -1,6 +1,6 @@
 'use strict';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { Set } from 'immutable';
 import React, {
   PropTypes
