@@ -50,10 +50,6 @@ export default class Tab extends React.Component {
       });
     }
 
-    let tabStyle = [
-      styles.container,
-      this.props.style,
-    ];
     return (
       <NativeButton
         testID={this.props.testID}
@@ -61,7 +57,7 @@ export default class Tab extends React.Component {
         onPress={this._handlePress}
         disabled={ disabled }
         disabledStyle={ disabledStyle }
-        style={ tabStyle }>
+        style={ [ styles.container, this.props.style ] }>
         <View style={ styles.row }>
           <View style={ styles.col }>
             {icon}

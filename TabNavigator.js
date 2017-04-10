@@ -132,7 +132,7 @@ export default class TabNavigator extends React.Component {
   _renderTab(item) {
     const { scrollEnabled } = this.props;
     let icon;
-    
+
     if (item === null) {
         return;
     }
@@ -179,8 +179,7 @@ export default class TabNavigator extends React.Component {
         disabledStyle={ item.props.disabledStyle }
         badge={badge}
         onPress={item.props.onPress}
-        hidesTabTouch={this.props.hidesTabTouch}
-        style={item.props.tabStyle}>
+        hidesTabTouch={this.props.hidesTabTouch}>
         {icon}
       </Tab>
     );
