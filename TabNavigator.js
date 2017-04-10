@@ -61,6 +61,9 @@ export default class TabNavigator extends React.Component {
   _updateRenderedSceneKeys(children, oldSceneKeys = Set()): Set {
     let newSceneKeys = Set().asMutable();
     React.Children.forEach(children, (item, index) => {
+      if (item === null) {
+        return;
+      }
       let key = this._getSceneKey(item, index);
       if (oldSceneKeys.has(key) || item.props.selected) {
         newSceneKeys.add(key);
@@ -75,6 +78,9 @@ export default class TabNavigator extends React.Component {
     let scenes = [];
 
     React.Children.forEach(children, (item, index) => {
+      if (item === null) {
+        return;
+      }
       let sceneKey = this._getSceneKey(item, index);
       if (!this.state.renderedSceneKeys.has(sceneKey)) {
         return;
@@ -126,6 +132,10 @@ export default class TabNavigator extends React.Component {
   _renderTab(item) {
     const { scrollEnabled } = this.props;
     let icon;
+    
+    if (item === null) {
+        return;
+    }
 
     if (!(icon = this._renderVectorialIcon(item))) {
       if (item.props.selected) {
@@ -169,7 +179,8 @@ export default class TabNavigator extends React.Component {
         disabledStyle={ item.props.disabledStyle }
         badge={badge}
         onPress={item.props.onPress}
-        hidesTabTouch={this.props.hidesTabTouch}>
+        hidesTabTouch={this.props.hidesTabTouch}
+        style={item.props.tabStyle}>
         {icon}
       </Tab>
     );

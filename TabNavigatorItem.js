@@ -7,6 +7,7 @@ import React, {
 import {
   Text,
   Image,
+  View,
 } from 'react-native';
 
 export default class TabNavigatorItem extends React.Component {
@@ -14,13 +15,14 @@ export default class TabNavigatorItem extends React.Component {
     style: Text.propTypes.style,
     selectedStyle: Text.propTypes.style,
     disabledStyle: Text.propTypes.style,
-    renderIcon: PropTypes.func.isRequired,
+    renderIcon: PropTypes.func,
     renderSelectedIcon: PropTypes.func,
     badgeText: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     renderBadge: PropTypes.func,
     title: PropTypes.string,
     titleStyle: Text.propTypes.style,
     selectedTitleStyle: Text.propTypes.style,
+    tabStyle: View.propTypes.style,
     selected: PropTypes.bool,
     onPress: PropTypes.func,
     iconName: PropTypes.string,
@@ -32,7 +34,6 @@ export default class TabNavigatorItem extends React.Component {
   };
 
   static defaultProps = {
-    renderIcon: () => <Image source={{ uri: 'null' }} />,
   };
 
   render() {
