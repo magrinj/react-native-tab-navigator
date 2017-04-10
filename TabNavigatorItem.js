@@ -34,6 +34,7 @@ export default class TabNavigatorItem extends React.Component {
   };
 
   static defaultProps = {
+    renderIcon: () => <Image source={{ uri: 'null' }} />, 
   };
 
   render() {

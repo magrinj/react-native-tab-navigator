@@ -29,7 +29,10 @@ export default class Tab extends React.Component {
 
   render() {
     let { title, badge, disabled, disabledStyle } = this.props;
-    let icon = React.Children.only(this.props.children); 
+    let icon = null;
+    if (React.Children.count(this.props.children) > 0) {
+      icon = React.Children.only(this.props.children);
+    }
 
     if (title) {
       title =
