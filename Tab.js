@@ -52,7 +52,6 @@ export default class Tab extends React.Component {
 
     let tabStyle = [
       styles.container,
-      title ? null : styles.untitledContainer,
       this.props.style,
     ];
     return (
@@ -62,7 +61,7 @@ export default class Tab extends React.Component {
         onPress={this._handlePress}
         disabled={ disabled }
         disabledStyle={ disabledStyle }
-        style={ [ styles.container, this.props.style ] }>
+        style={ tabStyle }>
         <View style={ styles.row }>
           <View style={ styles.col }>
             {icon}
